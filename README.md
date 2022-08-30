@@ -18,3 +18,8 @@ To write a good repo, we're following the structure below:
   * README.md
 * code/
   * __init__.py  // may change per language; 
+
+
+## Badges
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7033329.svg)](https://doi.org/10.5281/zenodo.7033329)
+
