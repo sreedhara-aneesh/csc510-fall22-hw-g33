@@ -2,7 +2,8 @@ dist: jammy
 language: python
 python:
   - "3.9"
-# install:
-#   - "pip install -r requirements.txt"
-# script:
-#   - pytest
+install:
+  - "pip install -r requirements.txt"
+  - "pip install pytest" # TODO: remove, cannot use pytest
+script:
+  - pytest # TODO: remove, cannot use pytest
