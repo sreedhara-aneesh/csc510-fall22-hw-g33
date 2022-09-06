@@ -1,12 +1,8 @@
 dist: jammy
-language: node_js
-node_js:
-  - "stable"
-cache:
-  directories:
-    - "node_modules"
-script:
-  - npm test
-  - npm run build
-# TODO: deploy
-# TODO: on
+language: python
+python:
+  - "3.6"
+install:
+  - "pip install -r requirements.txt"
+# script:
+#   - pytest
