@@ -10,7 +10,7 @@ class Num:
         self.n = 0  # items seen
         self.at = c  # column position
         self.name = s  # column name
-        self._has = {}  # kept data
+        self._has = []  # kept data
         self.lo = float('inf')  # lowest seen
         self.hi = float('-inf')  # highest seen
         self.isSorted = True  # no updates since last sort of data
@@ -35,18 +35,19 @@ class Num:
             self.lo = min(v, self.lo)
             self.hi = max(v, self.hi)
             if (len(self._has) < the.nums):
-                pos = 1 + len(self._has)
-            elif (random.random() < (the.nums / self.n)):
-                pos = random.random() * len(self._has)
-            if (pos):
+                pos = len(self._has)
+                self._has.append(int(v))
                 self.isSorted = False
+            elif (random.random() < (the.nums / self.n)):
+                pos = math.floor(random.random() * len(self._has))
                 self._has[pos] = int(v)
+                self.isSorted = False
 
     # Diversity (standard deviation for Nums, entropy for Syms)
     def div(self):
         a = self.nums()
-        return (self.per(a, .9)-self.per(a, .1)) / 2.58
+        return (Num.per(a, .9)-Num.per(a, .1)) / 2.58
 
     # Central tendancy (median for Nums, mode for Syms)
     def mid(self):
-        return self.per(self.nums(), .5)
+        return Num.per(self.nums(), .5)
