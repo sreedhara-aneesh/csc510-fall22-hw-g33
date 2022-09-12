@@ -7,14 +7,19 @@ os.chdir(scriptPath)
 
 #append the relative location you want to import from
 sys.path.append("../src")
-import the as classs
+import data as data_class
+import the as the_class
 
 def test():
-    test_result = True
+    csv_filename = "auto93.csv"
+    data_obj = data_class.Data (csv_filename)
 
-    the_object = classs.the ()
-    the_object.oo ()
+    the_object = the_class.the ()
+         
+    for _,col in (data_obj.cols.y):
+        the_object.oo(col)
     
+    test_result = True
     assert test_result
 
 # test ()
