@@ -66,7 +66,7 @@ class the:
     
 
 
-t = the ()
+# t = the ()
 # print (t.coerce (help))
 # print (help)
 
