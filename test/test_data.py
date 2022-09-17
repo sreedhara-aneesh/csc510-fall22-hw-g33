@@ -1,29 +1,19 @@
-# # INCOMPLETE
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(__file__, os.pardir, os.pardir, 'src')))
+from data_class import Data
+from the import the
 
-# #first change the cwd to the script path
-# import os, sys
-# scriptPath = os.path.realpath(os.path.dirname(sys.argv[0]))
-# os.chdir(scriptPath)
-
-# #append the relative location you want to import from
-# sys.path.append("../src")
-# import data as data_class
-# import the as the_class
-
-# def test():
-#     csv_filename = "auto93.csv"
-#     data_obj = data_class.Data (csv_filename)
-
-#     the_object = the_class.the ()
-         
-#     for _,col in (data_obj.cols.y):
-#         the_object.oo(col)
-    
-#     test_result = True
-#     assert test_result
-
-# # test ()
-
-# TODO: Finish
 def test():
+    csv_filename = "../data/auto93.csv"
+    data_obj = Data (csv_filename)
+
+    t = the ()
+    dict_y = data_obj.cols.y
+    for index in dict_y: # from the values list, find in which y col, you can insert a specific value
+        col = dict_y[index]
+        print (t.oo (col))
+
     assert True
+    
+
+test ()

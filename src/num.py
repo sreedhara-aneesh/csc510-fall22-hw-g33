@@ -30,6 +30,7 @@ class Num:
     # Reservoir sampler. Keep at most 'the.nums' numbers
     # (and if we run out of room, delete something old, at random).,
     def add(self, the, v):
+        v = float (v) #tithi
         if v != "?":
             self.n = self.n + 1
             self.lo = min(v, self.lo)

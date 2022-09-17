@@ -1,6 +1,6 @@
-from Num import Num
-from Sym import Sym
-from Utils import Utils
+from num import Num
+from sym import Sym
+from utils import Utils
 
 # ‘Columns‘ Holds of summaries of columns.
 # Columns are created once, then may appear in multiple slots.
@@ -21,3 +21,11 @@ class Cols:
                 Utils.push(input_dict, col)
             if value.endswith('!'):
                 self.klass = col
+    
+    def print_ (self):
+        print (self.names)
+        # print (self.all)
+        # print (self.klass)
+        # print (self.x)
+        # print (self.y)
+    
