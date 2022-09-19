@@ -4,5 +4,8 @@ import the as the_class
 
 def test():
     the_obj = the_class.the ()
-    print (the_obj.oo (the_obj.get_the ()))
+    dict_pass = the_obj.get_the ()
+    print (the_obj.oo(dict_pass))
     assert True
+
+# test()
