@@ -1,24 +1,30 @@
-# import sys
-# import os
-# sys.path.append(os.path.abspath(os.path.join(__file__, os.pardir, os.pardir, 'src')))
-# from num import Num
-# from row import Row # TODO use Row class from other commit 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(__file__, os.pardir, os.pardir, 'src')))
+from num import Num
+from row import Row # TODO use Row class from other commit 
+from the import the
+from utils import Utils
 
-# def checkcsv(n):
-#     test_result = True
-#     n = n + 1
-#     if n> 10:
-#         test_result = False 
-#     else:
-#         the_object = classs.the ()
-#         the_object.oo(row)
-#     assert test_result
 
-# def test_csv(n):
-#     n = 0
-#     csv_filename = "auto93.csv"
-#     csv(csv_filename, checkcsv(n))
 
-# TODO: Fix
+def checkcsv(n):
+    test_result = True
+    global rows
+    rows = rows + 1
+    if rows> 10:
+        return
+    else:
+        the.oo(n)
+    assert test_result
+
+def test_csv():
+    csv_filename = "./data/auto93.csv"
+    Utils.csv(csv_filename, checkcsv)
+
 def test():
-    assert True
+    global rows
+    rows = 0
+    test_csv()
+
+# test()

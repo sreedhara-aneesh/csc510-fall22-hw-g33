@@ -1,3 +1,7 @@
+from typing import Callable
+from the import the
+
+
 class Utils:
 
     def push(input_map, value):
@@ -5,11 +9,10 @@ class Utils:
         input_map[current_length+1] = value
         return value
 
-    def csv(fname, fun, sep, src, s, t):
-        sep = "([^" + the.seperator + "]+)"
-        with open(fname,'read') as f:
-            s = f.readlines()
+    def csv(fname:str, fun:Callable):
+        with open(fname, encoding="utf8") as f:
             t = {}
-            for s1 in s.search(sep):
-                t[1+t] =  the.coerce(s1)
-            fun(t)
+            for s in f.readlines():
+                t = list(map(the.coerce, s.strip().split(the.seperator )))
+                fun(t)
+                

@@ -13,6 +13,14 @@ help= """
 −S −−seperator feild seperator = ,"""
 
 class the:
+    eg = "nothing"
+    dump = False
+    file = '../data/auto93.csv'
+    help = False
+    nums = 512
+    seed = 10019
+    seperator = ","
+    
     def __init__(self):
         self.eg = "nothing"
         self.dump = False
@@ -22,7 +30,7 @@ class the:
         self.seed = 10019
         self.seperator = ","
 
-    def get_the (self):
+    def get_the(self):
         return (
             "−e −−eg start−up example = " + str (self.eg) + "\n" +
             "−d −−dump on test failure, exit with stack dump = " + str (self.dump) + "\n" +
@@ -37,7 +45,7 @@ class the:
 
     # Helpers
     # helper funtions need to be moved out of 'the' class
-    def show (self, dict_):
+    def show(dict_):
         str = "{"
         for k in dict_:
             v = dict_[k]
@@ -52,7 +60,7 @@ class the:
 
     # −− ‘o‘: generates a string from a nested table.
     # kept only oo funtion 
-    def oo (self, t):
+    def oo (t):
         if type (t) != dict:
             if type (t) == Num:
                 u = {}
@@ -65,7 +73,7 @@ class the:
                 u['w'] = -1 if t.name[-1] == '-' else 1
 
                 dict1 = dict(sorted(u.items()))
-                return self.show (dict1)
+                return show(dict1)
 
             elif type (t) == Sym:
                 print ('check if printing sym is needed anywhere, if so, will implement')
@@ -73,7 +81,7 @@ class the:
         else:
             # print ('the type of t is dict, this code needs to be checked')
             dict1 = dict(sorted(t.items()))
-            return self.show (dict1)
+            return show(dict1)
 
     # −− Update settings from values on command−line flags. Booleans need no values
     # −− (we just flip the defeaults).
@@ -102,14 +110,14 @@ class the:
                 print ("Terminating program..")
                 exit (0)
         
-    # def coerce (self, s):
-    #     try:
-    #         return int(s)
-    #     except Exception as e:
-    #         try:
-    #             return float(s)
-    #         except Exception as e:
-    #             return (re.match ("^%s*(.−)%s*$", s))
+    def coerce(s:str):
+        try:
+            return int(s)
+        except Exception as e:
+            try:
+                return float(s)
+            except Exception as e:
+                return s
 
 # t = the ()
 # t.CLI ()
