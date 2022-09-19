@@ -15,11 +15,12 @@ def checkcsv(n):
     if rows> 10:
         return
     else:
-        the.oo(n)
+        t = the ()
+        print (t.oo(n))
     assert test_result
 
 def test_csv():
-    csv_filename = "./data/auto93.csv"
+    csv_filename = "../data/auto93.csv"
     Utils.csv(csv_filename, checkcsv)
 
 def test():

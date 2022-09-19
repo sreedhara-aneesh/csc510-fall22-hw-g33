@@ -1,6 +1,7 @@
 from logging import exception
 from num import Num
 from sym import Sym
+import collections.abc
 
 # -- Parse ‘the‘ config settings from ‘help‘.
 help= """
@@ -45,22 +46,30 @@ class the:
 
     # Helpers
     # helper funtions need to be moved out of 'the' class
-    def show(dict_):
+    def show(self, dict_):
         str = "{"
-        for k in dict_:
-            v = dict_[k]
-            str += ":"
-            str += k
-            str += " "
-            str += v.__str__()
-            str += " "
-        str = str[:-1] + "}"
+        if type (dict_) == dict:
+            for k in dict_:
+                v = dict_[k]
+                str += ":"
+                str += k
+                str += " "
+                str += v.__str__()
+                str += " "
+            str = str[:-1] + "}"
+        else:
+            for k in dict_:
+                str += k.__str__()
+                str += " "
+                
+            str = str[:-1] + "}"
 
         return str
 
     # −− ‘o‘: generates a string from a nested table.
     # kept only oo funtion 
-    def oo (t):
+    # def oo (t):
+    def oo (self, t):
         if type (t) != dict:
             if type (t) == Num:
                 u = {}
@@ -73,15 +82,19 @@ class the:
                 u['w'] = -1 if t.name[-1] == '-' else 1
 
                 dict1 = dict(sorted(u.items()))
-                return show(dict1)
+                return self.show(dict1)
 
             elif type (t) == Sym:
                 print ('check if printing sym is needed anywhere, if so, will implement')
+
+            elif type (t) == list:
+                return self.show(t)
             return t
+
         else:
             # print ('the type of t is dict, this code needs to be checked')
             dict1 = dict(sorted(t.items()))
-            return show(dict1)
+            return self.show(dict1)
 
     # −− Update settings from values on command−line flags. Booleans need no values
     # −− (we just flip the defeaults).
