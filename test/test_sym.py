@@ -12,7 +12,8 @@ def test():
     mode, entropy = sym_obj.mid(-1, -1, -1), round (sym_obj.div(-1, -1), 3)
 
     the_obj = the ()
-    print ({'mid': mode, 'div': entropy})
+    dict_pass = {'mid': mode, 'div': entropy}
+    print (the_obj.oo(dict_pass))
 
     test_result = (mode=="a" and 1.37 <= entropy and entropy <=1.38)
     assert test_result
