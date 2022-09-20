@@ -95,10 +95,10 @@ class Data:
 
         table = {}
 
-        for index in showCols:
+        for index in range(0,len(showCols)):
             col = showCols[index]
             if fun == None:
-                v = col.mid ()
+                v = col.mid()
             else:
                 v = fun(col) # check: call function for Num/Sym that is passed as a parameter
 
