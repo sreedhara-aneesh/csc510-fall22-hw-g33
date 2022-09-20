@@ -18,4 +18,4 @@ def test():
     test_result = (mode=="a" and 1.37 <= entropy and entropy <=1.38)
     assert test_result
 
-test ()
+# test ()

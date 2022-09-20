@@ -30,18 +30,28 @@ class the:
         self.seed = 10019
         self.seperator = ","
 
+    # def get_the(self):
+    #     return (
+    #         "−e −−eg start−up example = " + str (self.eg) + "\n" +
+    #         "−d −−dump on test failure, exit with stack dump = " + str (self.dump) + "\n" +
+    #         "−f −−file file with csv data = " + str (self.filename) + "\n" +
+    #         "−h −−help show help = " + str (self.help) + "\n" +
+    #         "−n −−nums number of nums to keep = " + str (self.nums) + "\n" +
+    #         "−s −−seed random number seed = " + str (self.seed) + "\n" +
+    #         "−S −−seperator feild seperator = " + str (self.seperator) + "\n" +
+    #         "−1 −−exit terminate program\n"
+    #     )
     def get_the(self):
-        return (
-            "−e −−eg start−up example = " + str (self.eg) + "\n" +
-            "−d −−dump on test failure, exit with stack dump = " + str (self.dump) + "\n" +
-            "−f −−file file with csv data = " + str (self.filename) + "\n" +
-            "−h −−help show help = " + str (self.help) + "\n" +
-            "−n −−nums number of nums to keep = " + str (self.nums) + "\n" +
-            "−s −−seed random number seed = " + str (self.seed) + "\n" +
-            "−S −−seperator feild seperator = " + str (self.seperator) + "\n" +
-            "−1 −−exit terminate program\n"
-        )
-        
+        return_the_dict = {
+            "eg":self.eg,
+            "dump":self.dump,
+            "filename":self.filename,
+            "help":self.help,
+            "nums":self.nums,
+            "seed":self.seed,
+            "seperator":self.seperator
+        }
+        return return_the_dict
 
     # Helpers
     # helper funtions need to be moved out of 'the' class
