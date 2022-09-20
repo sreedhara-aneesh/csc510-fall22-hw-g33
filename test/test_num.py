@@ -22,3 +22,6 @@ def test_bignum():
         num.add(t, i)
     print(num._has)
     assert len(num._has) == 512
+
+test_num()
+test_bignum()
