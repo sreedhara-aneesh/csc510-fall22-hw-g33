@@ -18,7 +18,7 @@ class Cols:
         self.y = []  # depedent columns (that are not skipped)
         for index, value in enumerate(names):
             # Numerics start with Uppercase
-            print(value[0])
+            # print(value[0])
             if value[0].isalpha() and value[0].isupper():
                 col = Num(index, value) 
             else:

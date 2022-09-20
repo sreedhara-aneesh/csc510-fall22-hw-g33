@@ -67,7 +67,8 @@ class Data:
             dict_y = self.cols.y # list of y col names
 
             # from the values list, find in which x col, you can insert a specific value
-            for index in dict_x: 
+   
+            for index in range(0,len(dict_x)): 
                 col = dict_x[index]
                 if isinstance(col, Sym):
                     col.add (values [col.at])
@@ -75,7 +76,7 @@ class Data:
                     col.add (t, values [col.at])
 
             # from the values list, find in which y col, you can insert a specific value
-            for index in dict_y: 
+            for index in range(0,len(dict_y)): 
                 col = dict_y[index]
                 if isinstance(col, Sym):
                     col.add (values [col.at])

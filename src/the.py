@@ -96,7 +96,7 @@ class the:
             return self.show(dict1)
 
     # −− Update settings from values on command−line flags. Booleans need no values
-    # −− (we just flip the defeaults).
+    # −− (we just flip the defaults).
     def CLI (self):
         # input
         while True:

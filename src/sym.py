@@ -17,14 +17,14 @@ class Sym:
       self.n = self.n + 1
       self._has[v] = 1 +  ( self._has[v]  if(v in self._has) else 0)
 
-  def mid(self):
+  def mid(self, col, most, mode):
     most = -1
     for k,v in self._has.items():
       if(v > most):
         mode, most = k, v
     return mode
   
-  def div(self):
+  def div(self,e, fun):
     # helper func
     def fun(p):
       return p* math.log(p,2)

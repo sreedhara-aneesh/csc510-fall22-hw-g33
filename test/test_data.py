@@ -4,15 +4,14 @@ from dataclass import Data
 from the import the
 
 def test():
-    csv_filename = "../data/auto93.csv"
-    data_obj = Data (csv_filename)
+    csv_filename = "./data/auto93.csv"
+    data_obj = Data(csv_filename)
 
     t = the ()
     dict_y = data_obj.cols.y
-    for index in dict_y: # from the values list, find in which y col, you can insert a specific value
+    for index in range(0,len(dict_y)): # from the values list, find in which y col, you can insert a specific value
         col = dict_y[index]
         print (t.oo (col))
-
     assert True
     
 

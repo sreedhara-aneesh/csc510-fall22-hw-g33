@@ -1,12 +1,11 @@
 from typing import Callable
 from the import the
-
+from collections import defaultdict 
 
 class Utils:
 
     def push(input_map, value):
-        current_length = len(input_map)
-        input_map[current_length+1] = value
+        input_map.append(value)
         return value
 
     def csv(fname:str, fun:Callable):
