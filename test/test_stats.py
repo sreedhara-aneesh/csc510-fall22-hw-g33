@@ -1,6 +1,6 @@
 # first change the cwd to the script path
 import string
-from data_class import Data
+from dataclass import Data
 from sym import Sym
 from num import Num
 import os
