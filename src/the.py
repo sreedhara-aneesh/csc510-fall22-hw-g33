@@ -6,7 +6,7 @@ from sym import Sym
 help= """
 −e −−eg start−up example = nothing
 −d −−dump on test failure, exit with stack dump = false
-−f −−file file with csv data = ../data/auto93.csv
+−f −−file file with csv data = ./data/auto93.csv
 −h −−help show help = false
 −n −−nums number of nums to keep = 512
 −s −−seed random number seed = 10019
@@ -15,7 +15,7 @@ help= """
 class the:
     eg = "nothing"
     dump = False
-    file = '../data/auto93.csv'
+    filename = './data/auto93.csv'
     help = False
     nums = 512
     seed = 10019
@@ -24,7 +24,7 @@ class the:
     def __init__(self):
         self.eg = "nothing"
         self.dump = False
-        self.file = '../data/auto93.csv'
+        self.filename = './data/auto93.csv'
         self.help = False
         self.nums = 512
         self.seed = 10019
@@ -34,7 +34,7 @@ class the:
         return (
             "−e −−eg start−up example = " + str (self.eg) + "\n" +
             "−d −−dump on test failure, exit with stack dump = " + str (self.dump) + "\n" +
-            "−f −−file file with csv data = " + str (self.file) + "\n" +
+            "−f −−file file with csv data = " + str (self.filename) + "\n" +
             "−h −−help show help = " + str (self.help) + "\n" +
             "−n −−nums number of nums to keep = " + str (self.nums) + "\n" +
             "−s −−seed random number seed = " + str (self.seed) + "\n" +
@@ -111,7 +111,7 @@ class the:
             elif inputs[0] == '-d':
                 self.dump = (self.dump == False) or False
             elif inputs[0] == '-f':
-                self.file = inputs[1]
+                self.filename = inputs[1]
             elif inputs[0] == '-n':
                 self.nums = inputs[1]
             elif inputs[0] == '-s':

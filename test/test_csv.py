@@ -20,7 +20,8 @@ def checkcsv(n):
 def test():
     global rows
     rows = 0
-    csv_filename = "../data/auto93.csv"
+    the_obj = the_class.the ()
+    csv_filename = the_obj.filename
     Utils.csv(csv_filename, checkcsv)
 
 # test()
