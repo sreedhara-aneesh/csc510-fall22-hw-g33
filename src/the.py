@@ -47,19 +47,27 @@ class the:
     # helper funtions need to be moved out of 'the' class
     def show(self, dict_):
         str = "{"
-        for k in dict_:
-            v = dict_[k]
-            str += ":"
-            str += k
-            str += " "
-            str += v.__str__()
-            str += " "
-        str = str[:-1] + "}"
+        if type (dict_) == dict:
+            for k in dict_:
+                v = dict_[k]
+                str += ":"
+                str += k
+                str += " "
+                str += v.__str__()
+                str += " "
+            str = str[:-1] + "}"
+        else:
+            for k in dict_:
+                str += k.__str__()
+                str += " "
+                
+            str = str[:-1] + "}"
 
         return str
 
     # −− ‘o‘: generates a string from a nested table.
     # kept only oo funtion 
+    # def oo (t):
     def oo (self, t):
         if type (t) != dict:
             if type (t) == Num:
@@ -74,9 +82,14 @@ class the:
 
                 dict1 = dict(sorted(u.items()))
                 return self.show(dict1)
+
             elif type (t) == Sym:
                 print ('check if printing sym is needed anywhere, if so, will implement')
-            return t
+
+            elif type (t) == list:
+                return self.show(t)
+            # return t
+
         else:
             # print ('the type of t is dict, this code needs to be checked')
             dict1 = dict(sorted(t.items()))

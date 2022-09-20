@@ -14,13 +14,13 @@ def checkcsv(n):
         return
     else:
         the_obj = the_class.the ()
-        the_obj.oo(n)
+        print (the_obj.oo(n))
     assert test_result
 
 def test():
     global rows
     rows = 0
-    csv_filename = "./data/auto93.csv"
+    csv_filename = "../data/auto93.csv"
     Utils.csv(csv_filename, checkcsv)
 
 # test()
