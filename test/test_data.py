@@ -1,6 +1,6 @@
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(__file__, os.pardir, os.pardir, 'src')))
-from data_class import Data
+from dataclass import Data
 from the import the
 
 def test():
@@ -16,4 +16,4 @@ def test():
     assert True
     
 
-# test ()
+test ()

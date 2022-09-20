@@ -1,4 +1,5 @@
 import os
+from typing import Callable
 from cols import Cols
 from row import Row
 from num import Num
@@ -6,6 +7,7 @@ from sym import Sym
 from the import the
 
 class Data:
+
     def __init__(self, src):
         self.cols = None
         self.rows = []
@@ -83,7 +85,7 @@ class Data:
     # −− For ‘showCols‘ (default=‘data.cols.x‘) in ‘data‘, show ‘fun‘ (default=‘mid‘),
     # −− rounding numbers to ‘places‘ (default=2)
 
-    def stats (self, places, showCols, fun):
+    def stats (self, places, showCols, fun: Callable):
         if showCols == None:
             showCols = self.cols.y
         
@@ -97,7 +99,7 @@ class Data:
             if fun == None:
                 v = col.mid ()
             else:
-                v = col.fun # check: call function for Num/Sym that is passed as a parameter
+                v = fun(col) # check: call function for Num/Sym that is passed as a parameter
 
             if type (v) == float:
                 v = round (v, places)
