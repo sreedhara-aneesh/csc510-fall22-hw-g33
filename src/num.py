@@ -29,19 +29,19 @@ class Num:
     # Reservoir sampler. Keep at most 'the.nums' numbers
     # (and if we run out of room, delete something old, at random).,
     def add(self, the, v):
-        v = float (v) #tithi
+        v = int(v) #tithi
         if v != "?":
             self.n = self.n + 1
             self.lo = min(v, self.lo)
             self.hi = max(v, self.hi)
-            if (len(self._has) < the.nums):
+            if (len(self._has) < int(the.nums)):
                 pos = len(self._has)
                 self._has.append(int(v))
                 self.isSorted = False
-            elif (random.random() < (the.nums / self.n)):
+            elif (random.random() < (int(the.nums) / self.n)):
                 pos = math.floor(random.random() * len(self._has))
                 self._has[pos] = int(v)
-                self.isSorted = False
+            self.isSorted = False
 
     # Diversity (standard deviation for Nums, entropy for Syms)
     def div(self):
