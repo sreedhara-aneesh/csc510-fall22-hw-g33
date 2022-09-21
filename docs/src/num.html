@@ -143,6 +143,7 @@
                 <label class="view-source-button" for="Num-view-source"><span>View Source</span></label>
 
     </div>
+    <p>Num summarizes a stream of numbers.</p>
     <a class="headerlink" href="#Num"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Num-8"><a href="#Num-8"><span class="linenos"> 8</span></a><span class="k">class</span> <span class="nc">Num</span><span class="p">:</span>
 </span><span id="Num-9"><a href="#Num-9"><span class="linenos"> 9</span></a>
@@ -206,6 +207,9 @@
                 <label class="view-source-button" for="Num.__init__-view-source"><span>View Source</span></label>
 
     </div>
+    <p>Initializes the Num class</p>
+    <p>c: column position</p>
+    <p>s: column name</p>
     <a class="headerlink" href="#Num.__init__"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Num.__init__-10"><a href="#Num.__init__-10"><span class="linenos">10</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
 </span><span id="Num.__init__-11"><a href="#Num.__init__-11"><span class="linenos">11</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># items seen</span>
@@ -231,6 +235,9 @@
                 <label class="view-source-button" for="Num.per-view-source"><span>View Source</span></label>
 
     </div>
+    <p>return the 'p'-th thing from the sorted list 't'</p>
+    <p>p: the index of the item from list t</p>
+    <p>t: the list we are returning an item from</p>
     <a class="headerlink" href="#Num.per"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Num.per-20"><a href="#Num.per-20"><span class="linenos">20</span></a>    <span class="k">def</span> <span class="nf">per</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">.5</span><span class="p">):</span>
 </span><span id="Num.per-21"><a href="#Num.per-21"><span class="linenos">21</span></a>        <span class="n">p</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">p</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">+</span> <span class="mf">.5</span><span class="p">)</span>
@@ -251,6 +258,7 @@
                 <label class="view-source-button" for="Num.nums-view-source"><span>View Source</span></label>
 
     </div>
+    <p>Return kept numbers, sorted</p>
     <a class="headerlink" href="#Num.nums"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Num.nums-25"><a href="#Num.nums-25"><span class="linenos">25</span></a>    <span class="k">def</span> <span class="nf">nums</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="Num.nums-26"><a href="#Num.nums-26"><span class="linenos">26</span></a>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">isSorted</span><span class="p">:</span>
@@ -273,6 +281,9 @@
                 <label class="view-source-button" for="Num.add-view-source"><span>View Source</span></label>
 
     </div>
+    <p>Reservoir sampler. Keep at most 'the.nums' numbers (and if we run out of room, delete something old, at random).</p>
+    <p>the: holds the maximum number of numbers we can hold</p>
+    <p>v: the number to add</p>
     <a class="headerlink" href="#Num.add"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Num.add-33"><a href="#Num.add-33"><span class="linenos">33</span></a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">the</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
 </span><span id="Num.add-34"><a href="#Num.add-34"><span class="linenos">34</span></a>        <span class="n">v</span> <span class="o">=</span> <span class="nb">float</span> <span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="c1">#tithi</span>
@@ -304,6 +315,7 @@
                 <label class="view-source-button" for="Num.div-view-source"><span>View Source</span></label>
 
     </div>
+    <p>Diversity (standard deviation for Nums, entropy for Syms)</p>
     <a class="headerlink" href="#Num.div"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Num.div-49"><a href="#Num.div-49"><span class="linenos">49</span></a>    <span class="k">def</span> <span class="nf">div</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="Num.div-50"><a href="#Num.div-50"><span class="linenos">50</span></a>        <span class="n">a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nums</span><span class="p">()</span>
@@ -324,6 +336,7 @@
                 <label class="view-source-button" for="Num.mid-view-source"><span>View Source</span></label>
 
     </div>
+    <p>Central tendancy (median for Nums, mode for Syms)</p>
     <a class="headerlink" href="#Num.mid"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Num.mid-54"><a href="#Num.mid-54"><span class="linenos">54</span></a>    <span class="k">def</span> <span class="nf">mid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="Num.mid-55"><a href="#Num.mid-55"><span class="linenos">55</span></a>        <span class="k">return</span> <span class="n">Num</span><span class="o">.</span><span class="n">per</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nums</span><span class="p">(),</span> <span class="mf">.5</span><span class="p">)</span>

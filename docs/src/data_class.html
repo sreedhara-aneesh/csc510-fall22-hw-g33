@@ -199,6 +199,7 @@
                 <label class="view-source-button" for="Data-view-source"><span>View Source</span></label>
 
     </div>
+    <p>Data is a holder of "Rows" and their summaries (in "Cols")</p>
     <a class="headerlink" href="#Data"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Data-9"><a href="#Data-9"><span class="linenos">  9</span></a><span class="k">class</span> <span class="nc">Data</span><span class="p">:</span>
 </span><span id="Data-10"><a href="#Data-10"><span class="linenos"> 10</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">src</span><span class="p">):</span>
@@ -320,6 +321,8 @@
                 <label class="view-source-button" for="Data.__init__-view-source"><span>View Source</span></label>
 
     </div>
+    <p>Initializes Data</p>
+    <p>src: path of a csv file</p>
     <a class="headerlink" href="#Data.__init__"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Data.__init__-10"><a href="#Data.__init__-10"><span class="linenos">10</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">src</span><span class="p">):</span>
 </span><span id="Data.__init__-11"><a href="#Data.__init__-11"><span class="linenos">11</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">cols</span> <span class="o">=</span> <span class="kc">None</span>
@@ -375,6 +378,8 @@
                 <label class="view-source-button" for="Data.add-view-source"><span>View Source</span></label>
 
     </div>
+    <p>Add a 'row' to 'data'. Calls 'add()' to update the 'cols'with new values.</p>
+    <p>values: values used to update 'cols'</p>
     <a class="headerlink" href="#Data.add"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Data.add-49"><a href="#Data.add-49"><span class="linenos">49</span></a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
 </span><span id="Data.add-50"><a href="#Data.add-50"><span class="linenos">50</span></a>        <span class="n">t</span> <span class="o">=</span> <span class="n">the</span><span class="p">()</span>
@@ -426,6 +431,10 @@
                 <label class="view-source-button" for="Data.stats-view-source"><span>View Source</span></label>
 
     </div>
+    <p>For 'showCols' in 'data', show 'fun', rounding numbers to specified place</p>
+    <p>showCols: (default = 'data.cols.x')</p>
+    <p>fun: (default='mid')</p>
+    <p>places: (default=2)</p>
     <a class="headerlink" href="#Data.stats"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Data.stats-87"><a href="#Data.stats-87"><span class="linenos"> 87</span></a>    <span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">places</span><span class="p">,</span> <span class="n">showCols</span><span class="p">,</span> <span class="n">fun</span><span class="p">):</span>
 </span><span id="Data.stats-88"><a href="#Data.stats-88"><span class="linenos"> 88</span></a>        <span class="k">if</span> <span class="n">showCols</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
@@ -464,6 +473,7 @@
                 <label class="view-source-button" for="Data.print_rows-view-source"><span>View Source</span></label>
 
     </div>
+    <p>prints the rows in 'data'</p>
     <a class="headerlink" href="#Data.print_rows"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Data.print_rows-109"><a href="#Data.print_rows-109"><span class="linenos">109</span></a>    <span class="k">def</span> <span class="nf">print_rows</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="Data.print_rows-110"><a href="#Data.print_rows-110"><span class="linenos">110</span></a>        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="p">:</span>
@@ -484,6 +494,7 @@
                 <label class="view-source-button" for="Data.print_cols-view-source"><span>View Source</span></label>
 
     </div>
+    <p>prints the columns in 'data'</p>
     <a class="headerlink" href="#Data.print_cols"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Data.print_cols-113"><a href="#Data.print_cols-113"><span class="linenos">113</span></a>    <span class="k">def</span> <span class="nf">print_cols</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="Data.print_cols-114"><a href="#Data.print_cols-114"><span class="linenos">114</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">cols</span><span class="o">.</span><span class="n">print_</span><span class="p">()</span>

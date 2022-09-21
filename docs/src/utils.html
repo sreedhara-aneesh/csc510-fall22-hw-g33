@@ -97,6 +97,7 @@
                 <label class="view-source-button" for="Utils-view-source"><span>View Source</span></label>
 
     </div>
+    <p>Defines helper functions for the system.</p>
     <a class="headerlink" href="#Utils"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Utils-6"><a href="#Utils-6"><span class="linenos"> 6</span></a><span class="k">class</span> <span class="nc">Utils</span><span class="p">:</span>
 </span><span id="Utils-7"><a href="#Utils-7"><span class="linenos"> 7</span></a>
@@ -117,17 +118,7 @@
     
 
                             <div id="Utils.__init__" class="classattr">
-                                <div class="attr function">
-            
-        <span class="name">Utils</span><span class="signature pdoc-code condensed">()</span>
-
-        
-    </div>
-    <a class="headerlink" href="#Utils.__init__"></a>
-    
-    
-
-                            </div>
+                                
                             <div id="Utils.push" class="classattr">
                                         <input id="Utils.push-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
@@ -138,6 +129,9 @@
                 <label class="view-source-button" for="Utils.push-view-source"><span>View Source</span></label>
 
     </div>
+        <p>Push an element into our table and return that element</p>
+    <p>input_map: our table</p>
+    <p>value: the element we are putting in the table</p>
     <a class="headerlink" href="#Utils.push"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Utils.push-8"><a href="#Utils.push-8"><span class="linenos"> 8</span></a>    <span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="n">input_map</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 </span><span id="Utils.push-9"><a href="#Utils.push-9"><span class="linenos"> 9</span></a>        <span class="n">current_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_map</span><span class="p">)</span>
@@ -159,6 +153,9 @@
                 <label class="view-source-button" for="Utils.csv-view-source"><span>View Source</span></label>
 
     </div>
+    <p>Call a function on each 'row'. Row cells are divided in 'the.separator'</p>
+    <p>fname: name of our function</p>
+    <p>fun: the function that gets applied to each row</p>
     <a class="headerlink" href="#Utils.csv"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Utils.csv-13"><a href="#Utils.csv-13"><span class="linenos">13</span></a>    <span class="k">def</span> <span class="nf">csv</span><span class="p">(</span><span class="n">fname</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fun</span><span class="p">:</span> <span class="n">Callable</span><span class="p">):</span>
 </span><span id="Utils.csv-14"><a href="#Utils.csv-14"><span class="linenos">14</span></a>        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
