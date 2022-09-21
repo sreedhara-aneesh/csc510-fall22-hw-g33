@@ -4,5 +4,7 @@ python:
   - "3.9"
 install:
   - "pip install -r requirements.txt"
+  - "pipenv install"
 script:
-  - python3 test/run_tests.py
+  - coverage run test/run_tests.py
+  - coverage report
