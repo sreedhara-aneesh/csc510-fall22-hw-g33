@@ -7,8 +7,11 @@
 [![GitHub forks](https://img.shields.io/github/forks/sreedhara-aneesh/csc510-fall22-hw-g33)](https://github.com/sreedhara-aneesh/csc510-fall22-hw-g33/network/members)
 [![GitHub stars](https://img.shields.io/github/stars/sreedhara-aneesh/csc510-fall22-hw-g33)](https://github.com/sreedhara-aneesh/csc510-fall22-hw-g33/stargazers)
 [![GitHub license](https://img.shields.io/github/license/sreedhara-aneesh/csc510-fall22-hw-g33)](https://github.com/sreedhara-aneesh/csc510-fall22-hw-g33/blob/main/LICENSE.md)
+[![Docs](https://img.shields.io/badge/Read_Documentation-blue.svg)](https://sreedhara-aneesh.github.io/csc510-fall22-hw-g33/)
 
-
+(https://salmon-water-0471c8d0f.1.azurestaticapps.net)
+	
+https://sreedhara-aneesh.github.io/csc510-fall22-hw-g33/
 
 ## Functionality
 
