@@ -1,3 +1,6 @@
+branches:
+  only:
+    - main
 dist: jammy
 language: python
 python:
