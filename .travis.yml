@@ -1,3 +1,7 @@
+branches:
+  only:
+    - main
+    - development
 dist: jammy
 language: python
 python:
