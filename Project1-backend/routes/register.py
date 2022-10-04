@@ -3,9 +3,10 @@ from flask import (
 )
 
 from ..extensions import db
-from ..models.user import User
-from ..models.team import Team
-from ..models.project import Project
+from ..models.all import User
+# from ..models.user import User
+# from ..models.team import Team
+# from ..models.project import Project
 
 import functools
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -31,6 +32,7 @@ def register():
             except db.IntegrityError:
                 error = f"User {username} is already registered."
             else:
+                # return http error 
                 return redirect(url_for("auth.login"))
         flash(error)
     return {"success":"200"}

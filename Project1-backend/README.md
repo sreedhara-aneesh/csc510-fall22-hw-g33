@@ -20,3 +20,7 @@
 - `.exit`
 - `.tables`
 - `.schema`
+
+
+# TODO 
+- Use [flasgger](https://github.com/flasgger/flasgger) to add swagger documentation for backend 

@@ -2,7 +2,7 @@ from flask import Flask
 
 from .extensions import db, migrate
 from .routes.main import main
-from .routes.api import api
+# from .routes.api import api
 from .routes.register import registerer
 def create_app():
     app = Flask(__name__)
@@ -13,7 +13,7 @@ def create_app():
     migrate.init_app(app, db)
 
     app.register_blueprint(main)
-    app.register_blueprint(api)
+    # app.register_blueprint(api)
     app.register_blueprint(registerer) 
     
     return app
