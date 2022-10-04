@@ -21,6 +21,10 @@
 - `.tables`
 - `.schema`
 
+# Fill up db
+- `insert into Userabout values (1,'ljk', 232,'kljadkfj', '12-12-12', '11-11-11', 1);`
 
 # TODO 
 - Use [flasgger](https://github.com/flasgger/flasgger) to add swagger documentation for backend 
+- Use [flask validator](https://flask-validator.readthedocs.io/en/latest/) to validate fields 
+- Method for adding CRUD Rest API and Swagger documentation - https://www.imaginarycloud.com/blog/flask-python/ 
